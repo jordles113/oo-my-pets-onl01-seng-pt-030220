@@ -8,14 +8,14 @@ class Owner
     @@all << self 
   end 
   def self.all
-    @@owners
+    @@all
   end
 
   def self.reset_all
-    @@owners.clear
+    @@all.clear
   end
 
   def self. count
-    @@owners.length
+    @@all.length
   end
 end
