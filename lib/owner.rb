@@ -12,4 +12,15 @@ class Owner
   def say_species()
     puts "I am a #{@species}."
   end 
+  
+  def self.all 
+    @@all 
+  end 
+  
+  def self.count
+    @@all.length 
+  end 
+  
+  def self.reset 
+  end 
 end
