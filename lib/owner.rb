@@ -5,4 +5,6 @@ class Owner
     @name = name 
     @species = "human"
   end 
+  
+  def say
 end
