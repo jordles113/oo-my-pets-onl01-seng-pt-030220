@@ -5,7 +5,7 @@ class Owner
 
   @@owners = []
 
-  def initialize(species, pets = {:fishes => [], :dogs => [], :cats => []})
+  def initialize(species, pets = {:dogs => [], :cats => []})
     @species = species
     @pets = pets
     @@owners << self
@@ -13,10 +13,6 @@ class Owner
 
   def say_species
     "I am a #{@species}."
-  end
-
-  def buy_fish(fish_name)
-    @pets[:fishes] << Fish.new(fish_name)
   end
 
   def buy_cat(cat_name)
@@ -39,12 +35,6 @@ class Owner
     end
   end
 
-  def feed_fish
-    @pets[:fishes].each do |fish|
-      fish.mood = "happy"
-    end
-  end
-
   def sell_pets
     @pets.each do |type, name_array|
       name_array.each do |pet|
@@ -56,7 +46,7 @@ class Owner
   end
 
   def list_pets
-    "I have #{@pets[:fishes].length} fish, #{@pets[:dogs].length} dog(s), and #{@pets[:cats].length} cat(s)."
+    "I have #{@pets[:dogs].length} dog(s), and #{@pets[:cats].length} cat(s)."
   end
 
   def self.all
