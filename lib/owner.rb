@@ -9,7 +9,7 @@ class Owner
     @@all << self 
   end 
   
-  def say_species()
+  def say_species
     puts "I am a #{@species}."
   end 
   
@@ -21,7 +21,7 @@ class Owner
     @@all.length 
   end 
   
-  def self.reset 
+  def self.reset_all 
     @@all.clear
   end 
 end
